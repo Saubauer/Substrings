@@ -6,8 +6,8 @@ def substrings(str, dict)
     output = []
     array.each {|word| 
         dict.map {|check|
-           if word.match?(check) 
-            then output.push(check)
+           if word.downcase.match?(check.downcase) 
+            then output.push(check.downcase)
            end
         }
     }
